@@ -1,79 +1,72 @@
 # N1 Skills
 
-Repositório de skills para orientar assistentes de IA em tarefas específicas. Cada skill reúne instruções, métodos e referências em um arquivo `SKILL.md`.
+Coleção de skills para agentes de IA, com foco em copywriting pelo método N1 System e na criação e melhoria de novas skills.
 
-## Neuromarketing — N1 System
+Cada skill reúne instruções em um arquivo `SKILL.md` e pode incluir referências, scripts e recursos auxiliares para orientar o agente em tarefas específicas.
 
-A [skill de neuromarketing](.agents/skills/neuromarketing/SKILL.md) apresenta um framework de copywriting persuasivo baseado no método **N1 System**. Ela orienta a criação e a revisão de textos a partir do público, da oferta e da ação desejada, do primeiro gancho à chamada final.
+## Skills disponíveis
 
-O método combina pesquisa de público, princípios de persuasão, quebra de padrão e técnicas de humanização da escrita para construir uma comunicação clara, relevante e com personalidade.
+| Skill | Finalidade | Instruções |
+| --- | --- | --- |
+| **Neuromarketing** | Criar e revisar textos persuasivos com o método N1 System, incluindo a estrutura BRAZIL, headlines, anúncios, landing pages, emails e roteiros de vendas. | [SKILL.md](.agents/skills/neuromarketing/SKILL.md) |
+| **Skill Creator** | Criar, revisar e avaliar skills, com recursos para testes, comparação de resultados e melhoria das descrições de ativação. | [SKILL.md](.agents/skills/skill-creator/SKILL.md) |
 
-### Quando usar
+A skill de neuromarketing inclui referências sobre [leis do poder aplicadas à copy](.agents/skills/neuromarketing/references/leis-do-poder.md) e [humanização de textos](.agents/skills/neuromarketing/references/humanizer.md).
 
-- Anúncios e criativos para tráfego pago.
-- Headlines, ganchos e chamadas para ação.
-- Landing pages, páginas de vendas e páginas de captura.
-- Roteiros de vídeo de vendas e VSLs.
-- Emails de venda e sequências de email marketing.
-- Revisão de copies que precisam de mais clareza, diferenciação ou conexão com o público.
+## Como usar
 
-### Como o método funciona
+1. Abra este repositório no ambiente do seu agente de IA.
+2. Escolha uma skill e indique o caminho do respectivo `SKILL.md` no pedido. Se o ambiente oferecer descoberta automática de skills, confirme que ela está disponível.
+3. Descreva a tarefa, o contexto e o resultado esperado.
 
-O processo começa pela identificação do público e de suas motivações. Em seguida, define um ângulo de comunicação, organiza os argumentos e revisa a linguagem para evitar textos genéricos ou artificiais.
-
-A estrutura **BRAZIL** organiza a copy em seis etapas:
-
-| Etapa | Função |
-| --- | --- |
-| **B — Gancho** | Chamar a atenção com uma quebra de padrão. |
-| **R — Exposição** | Apresentar a situação e o problema do público. |
-| **A — Realidade** | Mostrar um caminho simples para lidar com o problema. |
-| **Z — A verdade** | Desenvolver a perspectiva que sustenta a proposta. |
-| **I — Solução** | Apresentar o produto, seu diferencial e responder a objeções. |
-| **L — Chamada** | Indicar a próxima ação e ajudar o leitor a visualizar o resultado. |
-
-A skill também inclui orientações sobre curiosidade e continuidade da leitura, quatro categorias de motivação de compra usadas pelo método — necessidade, status, metafísico e tribalismo — e uma revisão final de sentimento, conexão e confiança.
-
-### Como usar
-
-Em um assistente com suporte a skills, disponibilize a pasta [neuromarketing](.agents/skills/neuromarketing) conforme o mecanismo de carregamento da ferramenta. As instruções principais estão no `SKILL.md`, acompanhadas dos materiais de referência.
-
-Ao fazer um pedido, mencione a skill e informe:
-
-- **Produto ou serviço:** o que você oferece e qual é o diferencial.
-- **Público:** para quem é a mensagem, suas necessidades e objeções.
-- **Formato e canal:** onde o texto será publicado.
-- **Objetivo:** qual ação o leitor deve realizar.
-- **Tom e contexto:** estilo de linguagem, detalhes da oferta e provas disponíveis.
-
-Exemplo de criação:
+Exemplo para copywriting:
 
 ```text
-Use a skill de neuromarketing para criar 3 versões de um anúncio.
-
-Produto: curso de fotografia com celular.
-Público: pequenos empreendedores que fotografam os próprios produtos.
-Diferencial: aulas práticas com exercícios usando os produtos do aluno.
-Canal: Instagram.
-Objetivo: levar o leitor à página de apresentação do curso.
-Tom: direto, próximo e sem promessas exageradas.
-
-Aplique a estrutura BRAZIL e varie o gancho de cada versão.
+Use a skill em .agents/skills/neuromarketing/SKILL.md para criar
+três variações de anúncio para meu curso de fotografia para iniciantes.
+O público usa o celular para fotografar e quer melhorar suas fotos de viagem.
+Use um tom direto e finalize com uma chamada para conhecer o curso.
 ```
 
-Exemplo de revisão:
+Exemplo para criação de skills:
 
 ```text
-Use a skill de neuromarketing para revisar a copy abaixo.
-Identifique trechos genéricos, melhore a sequência dos argumentos
-e deixe a chamada para ação mais clara. Preserve os fatos da oferta
-e explique brevemente as principais alterações.
-
-[Cole a copy aqui]
+Use a skill em .agents/skills/skill-creator/SKILL.md para criar
+uma skill de revisão de artigos de blog, com critérios de clareza,
+estrutura e consistência de tom. Inclua exemplos para avaliar os resultados.
 ```
 
-### Arquivos da skill
+As instruções e referências podem ser lidas diretamente, sem instalação de dependências. Os scripts auxiliares da `skill-creator` têm requisitos próprios; consulte seus arquivos antes de executá-los.
 
-- [SKILL.md](.agents/skills/neuromarketing/SKILL.md): princípios, estrutura BRAZIL, processo de criação e checklist de revisão.
-- [Leis do Poder](.agents/skills/neuromarketing/references/leis-do-poder.md): adaptações das 48 Leis do Poder para posicionamento, autoridade e diferenciação na copy.
-- [Humanizer](.agents/skills/neuromarketing/references/humanizer.md): guia para identificar padrões de escrita artificial e tornar o texto mais natural.
+## Estrutura do projeto
+
+```text
+.
+├── .agents/
+│   └── skills/
+│       ├── neuromarketing/
+│       │   ├── SKILL.md
+│       │   └── references/
+│       └── skill-creator/
+│           ├── SKILL.md
+│           ├── LICENSE.txt
+│           ├── agents/
+│           ├── assets/
+│           ├── eval-viewer/
+│           ├── references/
+│           └── scripts/
+├── .aider-desk/skills/
+├── .claude/skills/
+├── skills-lock.json
+└── README.md
+```
+
+O conteúdo das skills fica em `.agents/skills/`. As pastas `.aider-desk/skills/` e `.claude/skills/` contêm links para a `skill-creator`. O arquivo `skills-lock.json` registra a origem e o hash dessa skill externa.
+
+## Adicionar uma skill
+
+Crie uma pasta em `.agents/skills/<nome-da-skill>/` com um arquivo `SKILL.md`. No início do arquivo, defina os campos `name` e `description` em YAML; em seguida, documente as instruções, as entradas necessárias e o resultado esperado. Coloque referências e scripts em subpastas quando necessário.
+
+## Créditos e licença
+
+A `skill-creator` tem origem no repositório `anthropics/skills`, conforme registrado em [skills-lock.json](skills-lock.json), e inclui uma [licença Apache 2.0](.agents/skills/skill-creator/LICENSE.txt). Essa licença acompanha o componente; o repositório não possui um arquivo de licença geral na raiz.
